@@ -9,6 +9,11 @@ export default function(Wrapped){
                 this.props.history.push('/')
             }
         }
+        componentWillReceiveProps(nextProps){
+            if(!nextProps.auth){
+                this.props.history.push('/')
+            }
+        }
 
         render(){
             return(
